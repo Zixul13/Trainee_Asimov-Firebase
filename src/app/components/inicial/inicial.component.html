@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-default navbar-static-top" style = "background-color: rgb(218, 218, 218);">
+    <div class="container-fluid">
+      <!-- suporte a mobile -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Visualizar itens</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style = "font-size: 14px;">Projeto final</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Projetos <span class="caret" style = "font-size: 14px;"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li role="separator" class="divider"></li>
+              <li><a [routerLink]="['/inicial']" >Dashboard</a></li>
+              <li><a [routerLink]="['/inicial/calculadora']" >Calculadora</a></li>
+              <li><a [routerLink]="['/inicial/tarefas']" >Gerenciador de tarefas</a></li>
+              <li><a [routerLink]="['/inicial/jogo-da-velha']">Jogo da velha</a></li>
+              <li role="separator" class="divider"></li>
+            </ul>
+          </li>
+          <li><a href="#" style = "font-size: 12px; color: red;">Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>

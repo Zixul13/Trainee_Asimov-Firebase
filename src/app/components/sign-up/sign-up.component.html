@@ -1,0 +1,42 @@
+<div class="displayTable text-center" >
+  <div style = "margin-top: 80px;">
+    <h3><b>	O PROJETO FINAL</b></h3>
+    </div>
+
+  <div class="displayTableCell "style = "margin-top: 60px;" >
+
+    <div class="authBlock">
+      <h3>Inscrever-se</h3>
+  <div style = "background-color: rgba(0, 0, 0, 0.11);">
+      <div class="formGroup">
+        <input type="email" class="formControl" style = "margin-top: 10px; margin-bottom: 5px;" placeholder="Endereço de e-mail" #userEmail required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="formControl" style = "margin-bottom: 5px;" placeholder="Senha" #userPwd required>
+      </div>
+
+      <div class="formGroup">
+        <input type="button" class="btn btn-info" style = "margin-top: 20px; margin-bottom: 5px;" value="Cadastrar" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+      </div>
+    </div>
+
+      <div class="formGroup" style= "padding-top: 5px; padding-bottom: 5px;">
+        <span class="or"><span class="orInner">OU</span></span>
+      </div>
+
+  <div style = "background-color: rgba(0, 0, 0, 0.11);">
+      <div class="formGroup">
+        <button type="button"  class="btn btn-info" style = "margin-top: 10px; margin-bottom: 10px;" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Continue com Google
+        </button>
+      </div>
+    </div>
+  </div>
+    <div class="redirectToLogin">
+      <span>Já tem uma conta? <span class="redirect btn btn-link" routerLink="/sign-in">Conecte-se</span></span>
+    </div>
+  </div>
+
+</div>
